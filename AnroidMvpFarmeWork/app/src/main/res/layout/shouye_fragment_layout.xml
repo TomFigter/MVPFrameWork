@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radio_bar_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="3dp"
+        >
+        <RadioButton
+            android:id="@+id/xinwen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_bar_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:text="新  闻"
+            android:textColor="@drawable/radio_textcolor_selector"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/redian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_bar_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="2dp"
+            android:text="热  点"
+            android:textColor="@drawable/radio_textcolor_selector"
+            android:textSize="18sp" />
+    </RadioGroup>
+    <include
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/xinwen_layout"
+        layout="@layout/xinwen_listview"
+        android:visibility="visible"
+        android:layout_below="@+id/radio_bar_group"
+        ></include>
+
+    <include
+        android:id="@+id/redian_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/radio_bar_group"
+        layout="@layout/redian_listview"
+        android:visibility="gone"></include>
+
+</RelativeLayout>
